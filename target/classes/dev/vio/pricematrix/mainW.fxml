@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="mainWindow" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.vio.pricematrix.MainController">
+
+    <VBox alignment="TOP_CENTER" spacing="10.0" GridPane.rowIndex="3">
+      <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#appAbout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@id-card.png" />
+         </image>
+         <VBox.margin>
+            <Insets top="-30.0" />
+         </VBox.margin>
+      </ImageView>
+      <Separator prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="-15.0" />
+         </VBox.margin></Separator>
+            <Button fx:id="addItem" onAction="#handleAddItemButton" prefWidth="110" text="     Add">
+                <graphic>
+                    <ImageView fitHeight="16" fitWidth="16">
+                        <Image url="@add.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="editItem" onAction="#handleEditItemButton" prefWidth="110" text="      Edit">
+                <graphic>
+                    <ImageView fitHeight="14" fitWidth="14">
+                        <Image url="@pencil.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="deleteItem" onAction="#handleDeleteButton" prefWidth="110" text=" Delete">
+                <graphic>
+                    <ImageView fitHeight="13" fitWidth="13">
+                        <Image url="@delete.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+      <Separator prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="3.0" />
+         </VBox.margin>
+      </Separator>
+            <Button fx:id="customer" mnemonicParsing="false" onAction="#handleSetUpCustomerButton" text="Set Up Customer">
+         <VBox.margin>
+            <Insets bottom="6.0" />
+         </VBox.margin></Button>
+      <GridPane alignment="CENTER_LEFT" hgap="5.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints minWidth="100.0" />
+          <ColumnConstraints minWidth="130.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+         <children>
+            <Label text="Name">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+             <Label text="Customer Code" GridPane.rowIndex="1" />
+             <Label text="Payment Term" GridPane.rowIndex="2" />
+             <Label text="Guarantee" GridPane.rowIndex="3" />
+             <Label text="Currency" GridPane.rowIndex="4" />
+             <Label text="Delivery Cond" GridPane.rowIndex="5" />
+             <Label text="Transport Mode" GridPane.rowIndex="6" />
+             <Label text="Segment" GridPane.rowIndex="7" />
+             <Label text="Shipment" GridPane.rowIndex="8" />
+            <Label fx:id="nameLabel" GridPane.columnIndex="1" />
+            <Label fx:id="cCodeLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="paymentTermLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="guaranteeLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="currencyLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="deliveryCondLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="transportModeLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="segmentLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="shipmentLabel" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <GridPane.margin>
+         <Insets left="10.0" top="10.0" />
+      </GridPane.margin>
+    </VBox>
+
+    <TableView fx:id="tableView" tableMenuButtonVisible="true" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+      <columns>
+          <TableColumn fx:id="item" prefWidth="35.0" text="Item" />
+          <TableColumn fx:id="prd" prefWidth="35.0" text="Prd" />
+          <TableColumn fx:id="thickness" prefWidth="65.0" text="Thickness" />
+          <TableColumn fx:id="width" prefWidth="60.0" text="Width" />
+          <TableColumn fx:id="length" prefWidth="60.0" text="Length" />
+          <TableColumn fx:id="qty" prefWidth="55.0" text="Qty(mt)" />
+          <TableColumn fx:id="weightPerSheet" prefWidth="105.0" text="Weight per Sheet" />
+          <TableColumn fx:id="pieces" prefWidth="45.0" text="Pieces" />
+          <TableColumn fx:id="quality" text="Quality" />
+          <TableColumn fx:id="galvanising" text="Galvanising" />
+          <TableColumn fx:id="usTest" text="US Test" />
+          <TableColumn fx:id="certificates" text="Certificates" />
+          <TableColumn fx:id="zTest" text="Z Test" />
+          <TableColumn fx:id="normalizing" text="Normalizing" />
+          <TableColumn fx:id="tuv" text="TUV" />
+          <TableColumn fx:id="dbs" text="DBS" />
+          <TableColumn fx:id="sep" text="SEP" />
+          <TableColumn fx:id="thicknessTolerances" text="Thickness Tolerance" />
+          <TableColumn fx:id="sulphur" text="Sulphur" />
+          <TableColumn fx:id="carbon" text="Carbon" />
+          <TableColumn fx:id="tensileTest" text="Tensile Test" />
+          <TableColumn fx:id="charpyTest" text="Charpy Test" />
+          <TableColumn fx:id="cev" text="CEV" />
+          <TableColumn fx:id="exwPivot" text="Exw Pivot(€/T)" />
+          <TableColumn fx:id="freightCost" text="Freight" />
+          <TableColumn fx:id="pivotItemPrice" text="Pivot Item Price(€/T)" />
+          <TableColumn fx:id="thicknessAndWidthExtra" text="Extra for Th. and W." />
+          <TableColumn fx:id="lengthExtra" text="Extra for Length" />
+          <TableColumn fx:id="qualityExtra" text="Extra for Quality" />
+          <TableColumn fx:id="galvanisingExtra" text="Extra for Galvanising" />
+          <TableColumn fx:id="usTestExtra" text="Extra for US Test" />
+          <TableColumn fx:id="certificatesExtra" text="Extra for Certificates" />
+          <TableColumn fx:id="zTestExtra" text="Extra for Z Test" />
+          <TableColumn fx:id="normalizingExtra" text="Extra for Normalizing" />
+          <TableColumn fx:id="tuvExtra" text="Extra for TUV" />
+          <TableColumn fx:id="dbsExtra" text="Extra for DBS" />
+          <TableColumn fx:id="sepExtra" text="Extra for SEP" />
+          <TableColumn fx:id="thicknessTolerancesExtra" text="Extra for Thickness Tolerance" />
+          <TableColumn fx:id="sulphurExtra" text="Extra for Sulphur" />
+          <TableColumn fx:id="carbonExtra" text="Extra for Carbon" />
+          <TableColumn fx:id="tensileTestExtra" text="Extra for Tensile Test" />
+          <TableColumn fx:id="charpyTestExtra" text="Extra for Charpy Test" />
+          <TableColumn fx:id="cevExtra" text="Extra for CEV" />
+          <TableColumn fx:id="plateUnitWeightExtra" text="Extra for Plate Unit Weight" />
+          <TableColumn fx:id="effectiveFCAPrice" text="Effective FCA Price(€/T)" />
+          <TableColumn fx:id="effectiveDAPPrice" text="Effective DAP Price(€/T)" />
+          <TableColumn fx:id="value" text="Value" />
+          <TableColumn fx:id="variableCost" text="V Cost" />
+          <TableColumn fx:id="contribution" text="Contribution" />
+      </columns>
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding></TableView>
+   <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+   <Separator orientation="VERTICAL" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   <HBox spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+      <children>
+         <Label text="Total" />
+         <Label text="QTY:" />
+         <Label fx:id="totalQty" />
+         <Label text="Value:" />
+         <Label fx:id="totalValue" />
+      </children>
+   </HBox>
+   <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+
+
+</GridPane>

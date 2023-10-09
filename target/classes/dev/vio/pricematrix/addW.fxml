@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane minWidth="330.0" prefHeight="500" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.vio.pricematrix.AddWController">
+<VBox>
+<GridPane hgap="10" vgap="10">
+   <children>
+      <Label text="Thickness (mm)" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+      <Label text="Width (mm)" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      <Label text="Length (mm)" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+      <Label text="Pieces" GridPane.rowIndex="3" />
+      <Label text="Quality" GridPane.rowIndex="4" />
+      <Label text="Galvanising" GridPane.rowIndex="5" />
+      <Label text="US Test" GridPane.rowIndex="6" />
+      <Label text="Certificates" GridPane.rowIndex="7" />
+      <Label text="Z Test" GridPane.rowIndex="8" />
+      <Label text="Normalising" GridPane.rowIndex="9" />
+      <Label text="TUV" GridPane.rowIndex="10" />
+      <Label text="DBS" GridPane.rowIndex="11" />
+      <Label text="SEP" GridPane.rowIndex="12" />
+      <Label text="Thickness Tolerance" GridPane.rowIndex="13" />
+      <Label text="Sulphur" GridPane.rowIndex="14" />
+      <Label text="Carbon" GridPane.rowIndex="15" />
+      <Label text="Tensile Test" GridPane.rowIndex="16" />
+      <Label text="Charpy Test" GridPane.rowIndex="17" />
+      <Label text="CEV" GridPane.rowIndex="18" />
+      <Label text="Freight" GridPane.rowIndex="19" />
+      <Label text="Pivot Item Price" GridPane.rowIndex="20" />
+      <Label text="Variable Cost" GridPane.rowIndex="21" />
+      <TextField fx:id="thickInput" promptText="Min: 5 -&gt; Max: 130" GridPane.columnIndex="2" />
+      <TextField fx:id="widthInput" promptText="Min: 1500 -&gt; Max: 3600" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <TextField fx:id="lengthInput" promptText="Min: 3000 -&gt; Max: 160001" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TextField fx:id="piecesInput" promptText="Pieces" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <TextField fx:id="vcInput" promptText="Variable Cost" GridPane.columnIndex="2" GridPane.rowIndex="21" />
+      <TextField fx:id="pivotItemPriceInput" promptText="Pivot Item Price" GridPane.columnIndex="2" GridPane.rowIndex="20" />
+      <TextField fx:id="freightInput" promptText="Freight" GridPane.columnIndex="2" GridPane.rowIndex="19" />
+      <ComboBox fx:id="qualityChoise" prefWidth="150.0" promptText="Quality" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <ComboBox fx:id="galvanisingChoise" prefWidth="150.0" promptText="Galvanising" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <ComboBox fx:id="usTestSChoise" prefHeight="26.0" prefWidth="72.0" promptText="S" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <ComboBox fx:id="usTestEChoise" prefHeight="26.0" prefWidth="72.0" promptText="E" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></ComboBox>
+      <ComboBox fx:id="certificatesChoise" prefWidth="150.0" promptText="Certificates" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <ComboBox fx:id="zTestChoise" prefWidth="150.0" promptText="Z Test" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+      <ComboBox fx:id="normalisingChoise" prefWidth="150.0" promptText="Normalising" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+      <ComboBox fx:id="tuvChoise" prefWidth="150.0" promptText="TUV" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+      <ComboBox fx:id="dbsChoise" prefWidth="150.0" promptText="DBS" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+      <ComboBox fx:id="sepChoise" prefWidth="150.0" promptText="SEP" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+      <ComboBox fx:id="thickToleranceChoise" prefWidth="150.0" promptText="Thickness Tolerance" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+      <ComboBox fx:id="sulphurChoise" prefWidth="150.0" promptText="Sulphur" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+      <ComboBox fx:id="carbonChoise" prefWidth="150.0" promptText="Carbon" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+      <ComboBox fx:id="tensileChoise" prefWidth="150.0" promptText="Tensile Test" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+      <ComboBox fx:id="charpyChoise" prefWidth="150.0" promptText="Charpy Test" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+      <ComboBox fx:id="cevChoise" prefWidth="150.0" promptText="CEV" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
+</VBox>
+</ScrollPane>

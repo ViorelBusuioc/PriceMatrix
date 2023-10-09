@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="customerW" hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.vio.pricematrix.CustomerController">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Label text="Customer Code" />
+      <Label text="Name" GridPane.rowIndex="1" />
+      <Label text="Payment Term" GridPane.rowIndex="2" />
+      <Label text="Guarantee" GridPane.rowIndex="3" />
+      <Label text="Currency" GridPane.rowIndex="4" />
+      <Label text="Delivery Condition" GridPane.rowIndex="5" />
+      <Label text="Transport Mode" GridPane.rowIndex="6" />
+      <Label text="Segment" GridPane.rowIndex="7" />
+      <Label text="Shipment" GridPane.rowIndex="8" />
+      <TextField fx:id="customerCode" maxWidth="150.0" GridPane.columnIndex="1" />
+      <TextField fx:id="name" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ComboBox fx:id="paymentTerm" prefWidth="150.0" promptText="Payment Term" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ComboBox fx:id="guarantee" prefWidth="150.0" promptText="Guarantee" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <ComboBox fx:id="currency" prefWidth="150.0" promptText="Currency" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <ComboBox fx:id="deliveryCond" prefWidth="150.0" promptText="INCO Term" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <ComboBox fx:id="transportMode" prefWidth="150.0" promptText="Transport Mode" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <ComboBox fx:id="segment" prefWidth="150.0" promptText="Segment" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <ComboBox fx:id="shipment" prefWidth="150.0" promptText="Shipment" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+   </children>
+</GridPane>
